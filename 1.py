@@ -24,12 +24,31 @@
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
 
-def twoSum(nums, target):
-    print('hello')
+class Solution():
+    def twoSum(self, nums, target):
+        for i, n in enumerate(nums): 
+            if n >= target:
+                continue
+            for j in range(i+1, len(nums)):
+                if (n + nums[j] == target):
+                    return [i, j]
+                
+    # def twoSum(self, nums, target):
+    #     seen = {}        
+    #     for i, n in enumerate(nums):
+    #         diff = target - n
+    #         print(diff in seen)
+    #         if diff in seen:
+    #             print([seen[diff], i])
+    #             return [seen[diff], i]
+    #         print(seen)
+    #         seen[n] = i
+
     
-    
-    
-    
-twoSum([3,2,4], 6)
+nums = [2,7,11,15]
+target = 9
+obj = Solution()
+result = obj.twoSum(nums , target)
+print('output is: ', result)
 
         
