@@ -51,17 +51,4 @@ obj = Solution()
 result = obj.twoSum(nums , target)
 print('output is: ', result)
 
-
-# Approch 2
-# def findSum(nums, target):
-#     for i, n in enumerate(nums):
-#         nextVal = target - n
-#         if nextVal in nums:
-#             return([i, nums.index(nextVal)])
-    
-# nums = [1,3,4,5]
-# target = 7
-# result = findSum(nums, target)
-# print(result)
-
         
