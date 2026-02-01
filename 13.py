@@ -41,6 +41,7 @@
 # Output: 1994
 # Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
+# approch 1
 
 # class solution(object):    
 #     def romToInt(self, rom):
@@ -77,6 +78,7 @@
 # obj = solution()
 # obj.romToInt('MCMXCIV')
 
+# approch 2
 class Solution:
     def romanToInt(self, s: str) -> int:
         roman = {
