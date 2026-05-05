@@ -26,16 +26,15 @@
 def findLonggestString(s):
     secMax = ''
     max = ''
-    for sub in s:
-        if sub not in secMax:
-            secMax += sub
+    for i,sub in enumerate(s):
+        secMax = sub
+        for innerSub in s[1+i::]:
+            if innerSub in secMax:
+                break
+            secMax += innerSub
             if len(secMax) > len(max):
-                print(secMax)
                 max = secMax
-        else:
-            secMax = secMax[1::] if len(secMax) > 1 else sub
-    return len(max)
+    return len(max) if max else len(secMax)
 
-
-result = findLonggestString('dvdf')
+result = findLonggestString('')
 print(result)
